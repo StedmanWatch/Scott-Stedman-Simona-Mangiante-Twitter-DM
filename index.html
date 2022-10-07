@@ -3,37 +3,15 @@
 <title>DMs Between Scott Stedman and Simona Mangiante</title>
 
 <head>
-    <script>
-        function checkDevice() {
-  	        var width = window.screen.availWidth;
-            var device = navigator.userAgent;
-            if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(device) ) {
-    	        device = "mobile";
-            }
-            else {
-    	        device = "desktop"
-            }
-  	        document.getElementById("width").innerHTML = width;
-            document.getElementById("isMobile").innerHTML = device;
-            document.documentElement.setAttribute("style", "--main-background-color: green"); = ((width - 528) / 2)+'px';
-            let values;
-            return values[device,width];
-        }
-        function padding() {
-            var width = window.screen.width;
-            var padding = ((width - 528)/2) + 'px'
-            return padding;
-        }
-    </script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-    <style>
+    <style type="text/css">
         body {
             font-family: "Roboto", sans-serif;
         }
         .image_container {
-          padding-left: padding();
+          padding-left: 30vw;
           align: center; 
-          width: 582px; 
+          width: 40vw; 
           text-align: center; 
           vertical-align: top;
         }
@@ -41,7 +19,7 @@
             width: 100%;
         }
         .break {
-          margin-left: 28%;
+          margin-left: 33vw;
           align: center;
           width: 582px;
           padding-top: 20px; 
@@ -53,7 +31,7 @@
           color: #ffffff
         }
 
-        @media only screen and (max-width: 1284px) {
+        @media only screen and (max-width: 412px) {
           /* For mobile phones: */
             .image_container {
                 padding-left: 0%;
@@ -82,34 +60,31 @@
         }
     </style>
 </head>
-<body onload="checkDevice()">
-    <p>Device:</p>
-    <p id="isMobile"></p>
-    <p>Width:</p>
-    <p id="width"></p>
-<p><a href="#break1">First Break</a></p>
-<p><a href="#break2">Second Break</a></p>
 
-<div id="IMG_4424-31.png" class="image_container">
-    <img class="image" src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/IMG_4424-31.png"/>
-</div>
+<body>
+    <p><a href="#break1">First Break</a></p>
+    <p><a href="#break2">Second Break</a></p>
 
-<div id="break1" class="break">
-    <strong>MISSING CONTINUITY</strong>
-</div>
+    <div id="IMG_4424-31.png" class="image_container">
+        <img class="image" src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/IMG_4424-31.png"/>
+    </div>
 
-<div id="IMG_4432-8.png" class="image_container">
-    <img class="image" src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/IMG_4432-8.png" />
-</div>
+    <div id="break1" class="break">
+        <strong>MISSING CONTINUITY</strong>
+    </div>
 
-<div id="break2" class="break">
-    <strong>MISSING CONTINUITY</strong>
-</div>
+    <div id="IMG_4432-8.png" class="image_container">
+        <img class="image" src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/IMG_4432-8.png" />
+    </div>
 
-<div id="IMG_4439-46.png" class="image_container">
-    <img class="image" src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/IMG_4439-46.png" />
-</div>
-  
-  
+    <div id="break2" class="break">
+        <strong>MISSING CONTINUITY</strong>
+    </div>
+
+    <div id="IMG_4439-46.png" class="image_container">
+        <img class="image" src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/IMG_4439-46.png" />
+    </div>
 </body>
+<script>
+</script>
 </html>
