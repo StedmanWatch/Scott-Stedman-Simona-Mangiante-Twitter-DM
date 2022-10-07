@@ -15,6 +15,13 @@
             }
   	        document.getElementById("width").innerHTML = width;
             document.getElementById("isMobile").innerHTML = device;
+            document.documentElement.setAttribute("style", "--main-background-color: green"); = ((width - 528) / 2)+'px';
+            let values;
+            return values[device,width];
+        }
+        function width() {
+            var width = window.screen.width;
+            return (width - 528)/2+'px';
         }
     </script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
@@ -23,7 +30,7 @@
             font-family: "Roboto", sans-serif;
         }
         .image_container {
-          padding-left: 28%;
+          padding-left: width();
           align: center; 
           width: 582px; 
           text-align: center; 
