@@ -19,7 +19,7 @@
             let values;
             return values[device,width];
         }
-        function width() {
+        function padding() {
             var width = window.screen.width;
             return (width - 528)/2+'px';
         }
@@ -30,7 +30,7 @@
             font-family: "Roboto", sans-serif;
         }
         .image_container {
-          padding-left: width();
+          padding-left: padding();
           align: center; 
           width: 582px; 
           text-align: center; 
