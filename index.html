@@ -3,6 +3,20 @@
 <title>DMs Between Scott Stedman and Simona Mangiante</title>
 
 <head>
+    <script>
+        function checkDevice() {
+  	        var width = window.screen.availWidth;
+            var device = navigator.userAgent;
+            if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(device) ) {
+    	        device = "mobile";
+            }
+            else {
+    	        device = "desktop"
+            }
+  	        document.getElementById("width").innerHTML = width;
+            document.getElementById("isMobile").innerHTML = device;
+        }
+    </script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <style>
         body {
@@ -60,7 +74,11 @@
         }
     </style>
 </head>
-<body>
+<body onload="checkDevice()">
+    <p>Device:</p>
+    <p id="isMobile"></p>
+    <p>Width:</p>
+    <p id="width"></p>
 <p><a href="#break1">First Break</a></p>
 <p><a href="#break2">Second Break</a></p>
 
