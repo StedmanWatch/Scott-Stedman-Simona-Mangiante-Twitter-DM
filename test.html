@@ -10,79 +10,78 @@
 
       .container {
         display: flex;
-        justify-content: left;
       }
 
-      .first {
-        width: 33vw;
+      .left {
+        flex: 1 33vw;
+        height: 100vh;
+        overflow-y: auto;
+        line-height: 15px;
       }
 
-      .second {
-        width: 33vw;
-        border-left: 1px solid hwb(192deg 94% 4%);
-        border-right: 1px solid hwb(192deg 94% 4%);
-      }
-
-      .menue {
-        width: 33vw;
-        position: fixed;
-        overflow-y: scroll;
-      }
-
-      .menue-item>p>a:link {
+      .left>p>a:link,
+      .left>p>a:visited {
         position: inherent;
         font-weight: 900;
         text-decoration: none;
         color: rgb(26, 140, 216);
       }
 
-      .menue-item>p>a:visited {
-        position: inherent;
-        font-weight: 900;
-        text-decoration: none;
-        color: rgb(26, 140, 216);
-      }
-
-      .menue-break>p>a:link,
-      a:visited {
+      .left-break>p>a:link,
+      .left-break>p>a:visited {
         position: inherent;
         font-weight: 900;
         text-decoration: none;
         color: red;
       }
 
-      .image {
-        width: 33vw;
+      .content {
+        flex: 5 33vw;
+        height: 100vh;
+        overflow-y: auto;
       }
 
-      .break {
-        margin-left: 0%;
-        align: center;
-        width: 100%;
-        padding-top: 50px;
-        padding-bottom: 50px;
+      .content-item {
+        width: 33vw;
+        border-left: 1px solid hwb(192deg 94% 4%);
+        border-right: 1px solid hwb(192deg 94% 4%);
+      }
+
+      .content-break {
+        width: 33vw;
+        padding-top: 20px;
+        padding-bottom: 20px;
         text-align: center;
         vertical-align: middle;
         border: 1 red solid;
         background-color: red;
-        font-size: 50px;
+        font-size: 30px;
         color: #ffffff
       }
 
       @media only screen and (max-width: 1300px) {
 
         /* For mobile phones: */
-        .first {
+        .container {
+          display: flex;
+          overflow-y: auto;
+        }
+
+        .left {
           display: none;
-          width: 100vw;
         }
 
-        .second {
-          width: 100vw;
+        .content {
+          margin-left: 0px;
+          margin-right: 0px;
+          border-left: 0px;
+          overflow-y: auto;
+          overflow-x: hidden;
         }
 
-        .image {
+        .content-item {
           width: 100vw;
+          border-right: 0px;
         }
 
         .image_container {
@@ -116,178 +115,148 @@
   <body>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <div class="container">
-      <div class="first">
-        <div class="menue">
-          <div class="menue-item">
-            <p>
-              <a href="#2018-01-22">Jan. 22, 2018</a>
-            </p>
-          </div>
-          <div class="menue-item">
-            <p>
-              <a href="#2018-01-25">Jan. 25, 2018</a>
-            </p>
-          </div>
-          <div class="menue-item">
-            <p>
-              <a href="#2018-02-05">Feb. 5, 2018</a>
-            </p>
-          </div>
-          <div class="menue-item">
-            <p>
-              <a href="#2018-02-06">Feb. 6, 2018</a>
-            </p>
-          </div>
-          <div class="menue-item">
-            <p>
-              <a href="#2018-06-03">Jun. 3, 2018</a>
-            </p>
-          </div>
-          <div class="menue-item">
-            <p>
-              <a href="#2018-09-19">Sep. 19, 2018</a>
-            </p>
-          </div>
-          <div class="menue-item">
-            <p>
-              <a href="#2018-09-20">Sep. 20, 2018</a>
-            </p>
-          </div>
-          <div class="menue-item">
-            <p>
-              <a href="#2018-09-27">Sep. 27, 2018</a>
-            </p>
-          </div>
-          <div class="menue-item">
-            <p>
-              <a href="#2018-09-28">Sep. 28, 2018</a>
-            </p>
-          </div>
-          <div class="menue-item">
-            <p>
-              <a href="#2018-10-02">Oct. 2, 2018</a>
-            </p>
-          </div>
-          <div class="menue-item">
-            <p>
-              <a href="#2018-10-03">Oct. 3, 2018</a>
-            </p>
-          </div>
-          <div class="menue-break">
-            <p>
-              <a href="#break1">SCREENSHOT BREAK</a>
-            </p>
-          </div>
-          <div class="menue-item">
-            <p>
-              <a href="#2018-10-04">Oct. 4, 2018</a>
-            </p>
-          </div>
-          <div class="menue-item">
-            <p>
-              <a href="#2018-10-04">Jan. 9, 2019</a>
-            </p>
-          </div>
-          <div class="menue-break">
-            <p>
-              <a href="#break2">SCREENSHOT BREAK</a>
-            </p>
-          </div>
-          <div class="menue-item">
-            <p>
-              <a href="#2019-01-11">Jan. 11, 2019</a>
-            </p>
-          </div>
-          <div class="menue-item">
-            <p>
-              <a href="#2019-01-11">Jan. 14, 2019</a>
-            </p>
-          </div>
-          <div class="menue-item">
-            <p>
-              <a href="#2019-01-11">Jan. 17, 2019</a>
-            </p>
-          </div>
-          <div class="menue-item">
-            <p>
-              <a href="#2019-01-11">Feb. 16, 2019</a>
-            </p>
-          </div>
-          <div class="menue-item">
-            <p>
-              <a href="#2019-01-11">Feb. 17, 2019</a>
-            </p>
-          </div>
-          <div class="menue-item">
-            <p>
-              <a href="#2019-01-11">Apr. 20, 2019</a>
-            </p>
-          </div>
-          <div class="menue-item">
-            <p>
-              <a href="#2019-01-11">Apr. 22, 2019</a>
-            </p>
-          </div>
-          <div class="menue-item">
-            <p>
-              <a href="#2019-01-11">Jun. 19, 2019</a>
-            </p>
-          </div>
-          <div class="menue-item">
-            <p>
-              <a href="#2019-01-11">Jun. 30, 2019</a>
-            </p>
-          </div>
-        </div>
+      <div class="left">
+        <p>
+          <a href="#2018-01-22">Jan. 22, 2018</a>
+        </p>
+        <p>
+          <a href="#2018-01-25">Jan. 25, 2018</a>
+        </p>
+        <p>
+          <a href="#2018-02-05">Feb. 5, 2018</a>
+        </p>
+        <p>
+          <a href="#2018-02-06">Feb. 6, 2018</a>
+        </p>
+        <p>
+          <a href="#2018-06-03">Jun. 3, 2018</a>
+        </p>
+        <p>
+          <a href="#2018-09-19">Sep. 19, 2018</a>
+        </p>
+        <p>
+          <a href="#2018-09-20">Sep. 20, 2018</a>
+        </p>
+        <p>
+          <a href="#2018-09-27">Sep. 27, 2018</a>
+        </p>
+        <p>
+          <a href="#2018-09-28">Sep. 28, 2018</a>
+        </p>
+        <p>
+          <a href="#2018-10-02">Oct. 2, 2018</a>
+        </p>
+        <p>
+          <a href="#2018-10-03">Oct. 3, 2018</a>
+        </p>
+        <span class="left-break">
+          <p>
+            <a href="#break1">SCREENSHOT BREAK</a>
+          </p>
+        </span>
+        <p>
+          <a href="#2018-10-04">Oct. 4, 2018</a>
+        </p>
+        <p>
+          <a href="#2018-10-04">Jan. 9, 2019</a>
+        </p>
+        <span class="left-break">
+          <p>
+            <a href="#break2">SCREENSHOT BREAK</a>
+          </p>
+        </span>
+        <p>
+          <a href="#2019-01-11">Jan. 11, 2019</a>
+        </p>
+        <p>
+          <a href="#2019-01-11">Jan. 14, 2019</a>
+        </p>
+        <p>
+          <a href="#2019-01-11">Jan. 17, 2019</a>
+        </p>
+        <p>
+          <a href="#2019-01-11">Feb. 16, 2019</a>
+        </p>
+        <p>
+          <a href="#2019-01-11">Feb. 17, 2019</a>
+        </p>
+        <p>
+          <a href="#2019-01-11">Apr. 20, 2019</a>
+        </p>
+        <p>
+          <a href="#2019-01-11">Apr. 22, 2019</a>
+        </p>
+        <p>
+          <a href="#2019-01-11">Jun. 19, 2019</a>
+        </p>
+        <p>
+          <a href="#2019-01-11">Jun. 30, 2019</a>
+        </p>
       </div>
-      <div class="second">
-        <div class="item" id="2018-01-22">
+      <div class="content">
+        <div class="content-item" id="2018-01-22">
           <img class="image" src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-01-22.png" />
         </div>
-        <div class="item" id="2018-01-25">
+        <div class="content-item" id="2018-01-25">
           <img class="image" src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-01-25.png" />
         </div>
-        <div class="item" id="2018-02-05">
+        <div class="content-item" id="2018-02-05">
           <img class="image" src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-02-05.png" />
         </div>
-        <div class="item" id="2018-02-06">
+        <div class="content-item" id="2018-02-06">
           <img class="image" src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-02-06.png" />
         </div>
-        <div class="item" id="2018-06-03">
+        <div class="content-item" id="2018-06-03">
           <img class="image" src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-06-03.png" />
         </div>
-        <div class="item" id="2018-09-19">
+        <div class="content-item" id="2018-09-19">
           <img class="image" src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-19.png" />
         </div>
-        <div class="item" id="2018-09-20">
+        <div class="content-item" id="2018-09-20">
           <img class="image" src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-20.png" />
         </div>
-        <div class="item" id="2018-09-27">
+        <div class="content-item" id="2018-09-27">
           <img class="image" src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-27.png" />
         </div>
-        <div class="item" id="2018-09-28">
+        <div class="content-item" id="2018-09-28">
           <img class="image" src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-28.png" />
         </div>
-        <div class="item" id="2018-10-02">
+        <div class="content-item" id="2018-10-02">
           <img class="image" src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-02.png" />
         </div>
-        <div class="item" id="2018-10-03">
+        <div class="content-item" id="2018-10-03">
           <img class="image" src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03.png" />
         </div>
-        <div id="break1" class="break">
+        <div id="break1" class="content-break">
           <strong>SCREENSHOT BREAK</strong>
         </div>
-        <div class="item" id="2018-10-04">
+        <div class="content-item" id="2018-10-04">
           <img class="image" src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/IMG_4447-53.png" />
         </div>
-        <div id="break2" class="break">
+        <div id="break2" class="content-break">
           <strong>SCREENSHOT BREAK</strong>
         </div>
-        <div class="item" id="2019-01-11">
+        <div class="content-item" id="2019-01-11">
           <img class="image" src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/IMG_4454-72.png" />
         </div>
       </div>
     </div>
   </body>
-  <script></script>
-</html>
+  <script>
+    // The function actually applying the offset
+    function offsetAnchor() {
+      if (location.hash.length !== 0) {
+        window.scrollTo(window.scrollX, window.scrollY - 100);
+      }
+    }
+    // Captures click events of all a elements with href starting with #
+    $(document).on('click', 'a[href^="#"]', function(event) {
+      // Click events are captured before hashchanges. Timeout
+      // causes offsetAnchor to be called after the page jump.
+      window.setTimeout(function() {
+        offsetAnchor();
+      }, 0);
+    });
+    // Set the offset when entering page with hash present in the url
+    window.setTimeout(offsetAnchor, 0);
+  </script>
