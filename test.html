@@ -95,6 +95,18 @@
           border-right: 0px;
         }
 
+        .content-break {
+          width: 100vw;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          text-align: center;
+          vertical-align: middle;
+          border: 1 red solid;
+          background-color: red;
+          font-size: 50px;
+          color: #ffffff
+        }
+
         .image_container {
           padding-left: 0%;
           align: center;
@@ -256,21 +268,5 @@
     </div>
   </body>
   <script>
-    // The function actually applying the offset
-    function offsetAnchor() {
-      if (location.hash.length !== 0) {
-        window.scrollTo(window.scrollX, window.scrollY - 100);
-      }
-    }
-    // Captures click events of all a elements with href starting with #
-    $(document).on('click', 'a[href^="#"]', function(event) {
-      // Click events are captured before hashchanges. Timeout
-      // causes offsetAnchor to be called after the page jump.
-      window.setTimeout(function() {
-        offsetAnchor();
-      }, 0);
-    });
-    // Set the offset when entering page with hash present in the url
-    window.setTimeout(offsetAnchor, 0);
   </script>
 </html>
