@@ -356,7 +356,7 @@ function show() {
 
 $('.copy_text').click(function (e) {
    e.preventDefault();
-   var copyText = $(location).attr("href") + "#" + $(this).parent().parent().attr("id");//$(location).attr("href");//$(this).attr('href');
+   var copyText = $(location).attr("href").replace(/#.*/, "") + "#" +  $(this).parent().parent().attr("id");//$(location).attr("href");//$(this).attr('href');
 
    document.addEventListener('copy', function(e) {
       e.clipboardData.setData('text/plain', copyText);
@@ -364,8 +364,8 @@ $('.copy_text').click(function (e) {
    }, true);
 
    document.execCommand('copy');  
-   console.log('copied text : ', copyText);
-   alert('copied text: ' + copyText); 
+   console.log('URL linking to selected message position copied to clipboard:\n\n', copyText);
+   alert('URL linking to selected message position copied to clipboard:\n\n' + copyText); 
  });
 </script>
 </html>
