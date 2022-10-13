@@ -335,25 +335,15 @@
 
     function hide(item) {
         var item_id = item.parentNode.id;
-        var item_url = 'https://test.com' + '#' + item_id;
+        var item_url = 'https://stedmanwatch.github.io/Scott-Stedman-Simona-Mangiante-Twitter-DM' + '#' + item_id;
         copyToClipboard(item_url);
         // hide options
         document.getElementById(item_id).querySelector('.options').style.height = "0px";
-
-        //var element_id = element.parentNode.id;
-        //var element_url = 'https://test.com' + '#' + element_id;
-        //alert('URL linking to selected message position copied to clipboard:\n\n' + element_url);
-        //document.getElementById(element.id).style.height = "0";
-        //document.getElementById(element).style.height = "0";
     }
 
     function copyToClipboard(string) {
         var dummy = document.createElement("textarea");
-        // to avoid breaking orgain page when copying more words
-        // cant copy when adding below this code
-        // dummy.style.display = 'none'
         document.body.appendChild(dummy);
-        //Be careful if you use texarea. setAttribute('value', value), which works with "input" does not work with "textarea". – Eduard
         dummy.value = string;
         dummy.select();
         document.execCommand("copy");
