@@ -127,13 +127,17 @@
 
         .iframe-container {
             position: relative;
+            display: flex;
             width: 100vw;
             align-items: center;
             text-align: center;
-            height: 100%;
+            height: calc(100vh - 100px);
+            justify-content: center;
+            flex-direction: column;
         }
 
         iframe {
+            position: relative;
             width: 580px;
             height: 100%;
             border-top: 0;
@@ -198,6 +202,17 @@
             #scott {
                 background-color: #eff3f4;
                 color: black;
+            }
+
+            .iframe-container {
+                position: relative;
+                display: flex;
+                width: 100vw;
+                align-items: center;
+                text-align: center;
+                height: calc(100vh - max(65px, 11vw));
+                justify-content: center;
+                flex-direction: column;
             }
 
             iframe {
