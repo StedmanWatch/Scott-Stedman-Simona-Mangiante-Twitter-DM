@@ -235,8 +235,7 @@
         </div>
 
         <div class="iframe-container">
-            <iframe class="ifeame"
-                src="https://stedmanwatch.github.io/Scott-Stedman-Simona-Mangiante-Twitter-DM/iframe.html"></iframe>
+            <iframe class="ifeame" id="iframe"></iframe>
         </div>
 
 
@@ -251,6 +250,20 @@
     function closeNav() {
         document.getElementById("side-nav").style.width = "0";
     }
+
+    function setAnchor() {
+        var hash = window.location.hash.substr(1);
+        var iframe = document.getElementById('iframe');
+        var url = "https://stedmanwatch.github.io/Scott-Stedman-Simona-Mangiante-Twitter-DM/iframe.html";
+        var iframe_target;
+        if (hash != '') {
+            iframe_target = url + '#' + hash;
+        } else {
+            iframe_target = url;
+        }
+        iframe.src = iframe_target;
+    }
+    setAnchor();
 </script>
 
 </HTML>
