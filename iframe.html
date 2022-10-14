@@ -1,840 +1,1121 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en-US">
-    <head>
-        <title>Scott Stedman &#8646; Simona Mangiante [DM] - Timeline</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <style>
-            body {
-                font-family: Helvetica Neue LT, Helvetica Neue, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
-            }
 
-            .container {
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                margin:0;
-                padding:0;
-            }
+<head>
+    <title>Scott Stedman &#8646; Simona Mangiante [DM] - Timeline</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <style>
+        body {
+            font-family: Helvetica Neue LT, Helvetica Neue, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+        }
 
-            .content-item {
-                top: 0;
-                left: 0;
-                display: flex;
-                flex-direction: column;
-                margin:0;
-                padding:0;
-            }
+        .container {
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .content-item {
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+        }
+
+        .img {
+            top: 0;
+            left: 0;
+            display: block;
+            width: 580px;
+            cursor: pointer;
+            margin: 0;
+            padding: 0;
+        }
+
+        .options {
+            top: 0;
+            left: 0;
+            display: block;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 20px;
+            font-weight: bold;
+            width: 580px;
+            height: 0;
+            cursor: pointer;
+            background-color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        .bubble {
+            background-color: #39C999;
+            color: white;
+            border-radius: 2rem;
+            padding: 0.7rem 1.5rem 0.8rem 1.5rem;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .context-box {
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            width: 580px;
+            padding-top: 10px;
+            border-top: 2px solid #f1f1f1;
+        }
+
+        .context {
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 10px;
+            */
+        }
+
+        .context>p {
+            font-size: 1.4em;
+            line-height: 1.3em;
+            padding-bottom: 0px;
+            margin: 0.7em;
+        }
+
+        .context>p>span {
+            font-size: 0.8em;
+            line-height: 1em;
+            font-weight: 900;
+            margin: 0;
+        }
+
+        .context>p>a:link,
+        a:visited {
+            text-decoration: none;
+            color: #1d9bf0;
+        }
+
+        .context-box>img {
+            width: 100% cursor: pointer;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+        }
+
+        .context-footer {
+            width: 580px;
+            margin-top: 20px;
+            height: 0;
+            border-bottom: 2px solid #f1f1f1;
+        }
+
+        @media only screen and (max-width: 580px) {
 
             .img {
-                top: 0;
-                left: 0;
-                display: block;
-                width: 580px;
-                cursor: pointer;
-                margin:0;
-                padding:0;
+                width: 100%;
             }
 
             .options {
-                top: 0;
-                left: 0;
-                display: block;
-                text-align: center;
-                vertical-align: middle;
-                font-size: 20px;
-                font-weight: bold;
-                width: 580px;
-                height: 0;
-                cursor: pointer;
-                background-color: white;
-                margin:0;
-                padding:0;
+                width: 100%;
             }
 
             .bubble {
-                background-color: #39C999;
-                color: white;
+                font-size: 4vw;
+                font-size: max(10px, 3vw);
                 border-radius: 2rem;
-                padding: 0.7rem 1.5rem 0.8rem 1.5rem;
+                padding: 0.7em 1.5em 0.8em 1.5em;
                 font-weight: 700;
                 cursor: pointer;
             }
 
             .context-box {
-                display:flex;
+                display: flex;
                 flex-direction: column;
                 background-color: white;
-                top:0;
-                left:0;
-                right:0;
-                bottom:0;
-                width:580px;
-                border-top:1px solid #f1f1f1;
-                border-bottom:1px solid #f1f1f1;
-                padding-top:10px;
-                padding-bottom:10px;
+                width: 100%;
+                padding-top: 2vw;
+                border-top: 2px solid #f1f1f1;
             }
 
             .context {
-                padding-left:20px;
-                padding-right:20px;
+                padding-left: 3vw;
+                padding-right: 3vw;
+                padding-bottom: 3vw;
             }
 
-            .context > p {
-                font-size: 1.4em;
-                line-height: 1.3em;
-                padding-bottom: 0px;
-                margin:0.7em;
+            .context>p {
+                font-size: 5vw;
+                font-size: max(16px, 4vw);
             }
 
-            .context > p > span {
-                font-size: 0.8em;
-                line-height: 1em;
+            .context>p>span {
+                font-size: 3.5vw;
+                font-size: max(10px, 3vw);
                 font-weight: 900;
-                margin:0;
             }
 
-            .context > p > a:link, a:visited {
+            .context>p>a:link,
+            a:visited {
                 text-decoration: none;
                 color: #1d9bf0;
             }
 
-            .context.img {
-                display: block;
-                top: 0;
-                left: 0;
-                right:0;
-                display: block;
-                width: 100%
-                cursor: pointer;
-                margin:0;
-                padding:0;
+            .context-box>img {
+                width: 100% cursor: pointer;
+                margin-bottom: 3vw;
+                padding-bottom: 3vw;
             }
 
-            .context. img {
-                width:100%;
+            .context-footer {
+                width: 100%;
+                height: 2vw;
+                border-bottom: 2px solid #f1f1f1;
             }
 
-            @media only screen and (max-width: 580px) {
-                .img {
-                    width: 100%;
-                }
+        }
+    </style>
+</head>
 
-                .options {
-                    width: 100%;
-                }
-
-                .bubble {
-                    font-size: 4vw;
-                    font-size: max(10px, 3vw);
-                    border-radius: 2rem;
-                    padding: 0.7em 1.5em 0.8em 1.5em;
-                    font-weight: 700;
-                    cursor: pointer;
-                }
-            }
-        </style>
-    </head>
-    <body>
-        <script type="text/javascript">
-            (function (window, document, dataLayerName, id) {
-                window[dataLayerName] = window[dataLayerName] || [], window[dataLayerName].push({ start: (new Date).getTime(), event: "stg.start" }); var scripts = document.getElementsByTagName('script')[0], tags = document.createElement('script');
-                function stgCreateCookie(a, b, c) { var d = ""; if (c) { var e = new Date; e.setTime(e.getTime() + 24 * c * 60 * 60 * 1e3), d = "; expires=" + e.toUTCString() } document.cookie = a + "=" + b + d + "; path=/" }
-                var isStgDebug = (window.location.href.match("stg_debug") || document.cookie.match("stg_debug")) && !window.location.href.match("stg_disable_debug"); stgCreateCookie("stg_debug", isStgDebug ? 1 : "", isStgDebug ? 14 : -1);
-                var qP = []; dataLayerName !== "dataLayer" && qP.push("data_layer_name=" + dataLayerName), isStgDebug && qP.push("stg_debug"); var qPString = qP.length > 0 ? ("?" + qP.join("&")) : "";
-                tags.async = !0, tags.src = "https://stedmanwatch.containers.piwik.pro/" + id + ".js" + qPString, scripts.parentNode.insertBefore(tags, scripts);
-                !function (a, n, i) { a[n] = a[n] || {}; for (var c = 0; c < i.length; c++)!function (i) { a[n][i] = a[n][i] || {}, a[n][i].api = a[n][i].api || function () { var a = [].slice.call(arguments, 0); "string" == typeof a[0] && window[dataLayerName].push({ event: n + "." + i + ":" + a[0], parameters: [].slice.call(arguments, 1) }) } }(i[c]) }(window, "ppms", ["tm", "cm"]);
-            })(window, document, 'dataLayer', '0191a78a-68a3-47a9-846b-db762dc7e645');
-        </script>
-        <div class="container">
-            <div class="content-item" id="2018-01-22-14-55">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-01-22-14-55.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-01-22-15-16">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-01-22-15-16.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-01-22-15-25">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-01-22-15-25.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-01-25-13-09">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-01-25-13-09.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-02-05-16-35">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-02-05-16-35.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-02-05-16-55">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-02-05-16-55.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-02-05-18-05">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-02-05-18-05.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-02-06-12-19">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-02-06-12-19.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-06-03-22-54">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-06-03-22-54.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-09-19-18-38">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-19-18-38.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-09-20-17-32">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-20-17-32.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-09-20-18-13">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-20-18-13.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-09-20-18-14">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-20-18-14.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-09-20-18-16">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-20-18-16.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-09-20-18-17">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-20-18-17.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-09-20-18-19">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-20-18-19.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-09-20-18-28">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-20-18-28.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-09-27-16-25">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-27-16-25.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-09-27-17-01A">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-27-17-01A.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-09-27-17-01B">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-27-17-01B.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-09-27-18-11">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-27-18-11.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-09-27-18-14">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-27-18-14.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-09-28-00-17">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-28-00-17.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-09-28-00-31">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-28-00-31.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-09-28-02-25">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-28-02-25.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-09-28-02-27">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-28-02-27.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-09-28-10-08">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-28-10-08.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-09-28-10-28">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-28-10-28.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-09-28-13-06">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-28-13-06.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-09-28-13-21">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-28-13-21.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-09-28-13-22">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-28-13-22.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-10-02-19-00">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-02-19-00.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-10-03-01-06">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-01-06.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-10-03-10-31">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-10-31.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-10-03-10-49">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-10-49.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-10-03-11-31">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-11-31.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-10-03-11-33">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-11-33.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-10-03-11-39">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-11-39.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-10-03-12-14">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-12-14.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-10-03-12-22">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-12-22.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-10-03-12-28">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-12-28.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-10-03-13-24">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-13-24.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-10-03-15-00">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-15-00.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-10-03-15-11A">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-15-11A.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-10-03-15-11B">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-15-11B.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-10-03-15-19">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-15-19.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-10-03-15-21">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-15-21.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-10-03-15-25">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-15-25.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-10-03-16-59">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-16-59.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-10-03-17-27">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-17-27.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-10-03-17-33">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-17-33.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-10-03-17-35">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-17-35.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-10-03-19-35">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-19-35.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-10-03-19-49">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-19-49.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-10-03-19-52">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-19-52.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-10-03-19-54">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-19-54.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-10-03-19-55A">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-19-55A.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-10-03-19-55B">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-19-55B.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-10-03-19-56">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-19-56.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-10-03-19-57A">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-19-57A.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-10-03-19-57B">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-19-57B.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-10-03-19-58">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-19-58.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-10-03-19-59">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-19-59.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-10-03-20-00">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-20-00.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-10-03-20-02">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-20-02.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-10-03-20-08">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-20-08.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-10-03-20-15">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-20-15.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-10-03-20-15">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-20-15.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-10-04-article">
-                <div class="context-box">
-                    <div class="context">
-                        <p><span>October 4, 2018<span></p>
-                        <p>Scott Stedman publishes his <a href="" target="_blank" >first article</a> about Simona Mangiante on Medium, accusing her for missleading the public.</p>
-                    </div>
-                </div>
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-04-article.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-10-04-01-12">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-04-01-12-black.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-10-04-01-44">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-04-01-44-black.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-10-04-01-52">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-04-01-52.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2018-10-04-01-54">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-04-01-54.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2019-01-09-00-55A">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-09-00-55A.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2019-01-09-00-55B">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-09-00-55B.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2019-01-09-00-57">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-09-00-57.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2019-01-09-00-59">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-09-00-59.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2019-01-09-01-02">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-09-01-02.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2019-01-09-01-03">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-09-01-03.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2019-01-09-01-05A">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-09-01-05A.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2019-01-09-01-05B">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-09-01-05B.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2019-01-09-01-08">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-09-01-08.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2019-01-09-01-16">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-09-01-16.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2019-01-09-01-18">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-09-01-18.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2019-01-09-01-21A">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-09-01-21A.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2019-01-09-01-21B">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-09-01-21B.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2019-01-09-01-22">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-09-01-22.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2019-01-09-01-23">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-09-01-23.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2019-01-09-01-24">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-09-01-24.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2019-01-09-01-25">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-09-01-25.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2019-01-09-01-27">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-09-01-27.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2019-01-09-01-34">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-09-01-34.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
-            </div>
-            <div class="content-item" id="2019-01-09-11-14">
-                <img class="img" onclick="show(this)"
-                    src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-09-11-14.png" />
-                <div class="options" id="options" onclick="hide(this)">
-                    <p><span class="bubble">Share link to this location</span></p>
-                </div>
+<body>
+    <script type="text/javascript">
+        (function (window, document, dataLayerName, id) {
+            window[dataLayerName] = window[dataLayerName] || [], window[dataLayerName].push({ start: (new Date).getTime(), event: "stg.start" }); var scripts = document.getElementsByTagName('script')[0], tags = document.createElement('script');
+            function stgCreateCookie(a, b, c) { var d = ""; if (c) { var e = new Date; e.setTime(e.getTime() + 24 * c * 60 * 60 * 1e3), d = "; expires=" + e.toUTCString() } document.cookie = a + "=" + b + d + "; path=/" }
+            var isStgDebug = (window.location.href.match("stg_debug") || document.cookie.match("stg_debug")) && !window.location.href.match("stg_disable_debug"); stgCreateCookie("stg_debug", isStgDebug ? 1 : "", isStgDebug ? 14 : -1);
+            var qP = []; dataLayerName !== "dataLayer" && qP.push("data_layer_name=" + dataLayerName), isStgDebug && qP.push("stg_debug"); var qPString = qP.length > 0 ? ("?" + qP.join("&")) : "";
+            tags.async = !0, tags.src = "https://stedmanwatch.containers.piwik.pro/" + id + ".js" + qPString, scripts.parentNode.insertBefore(tags, scripts);
+            !function (a, n, i) { a[n] = a[n] || {}; for (var c = 0; c < i.length; c++)!function (i) { a[n][i] = a[n][i] || {}, a[n][i].api = a[n][i].api || function () { var a = [].slice.call(arguments, 0); "string" == typeof a[0] && window[dataLayerName].push({ event: n + "." + i + ":" + a[0], parameters: [].slice.call(arguments, 1) }) } }(i[c]) }(window, "ppms", ["tm", "cm"]);
+        })(window, document, 'dataLayer', '0191a78a-68a3-47a9-846b-db762dc7e645');
+    </script>
+    <div class="container">
+        <div class="content-item" id="2018-01-22-14-55">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-01-22-14-55.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
             </div>
         </div>
-        <script>
-            function show(item) {
-                var item_id = item.parentNode.id;
-                if (document.getElementById(item_id).querySelector('.options').style.height === "4rem") {
-                    document.getElementById(item_id).querySelector('.options').style.height = "0px";
-                } else {
-                    var all_options = document.getElementsByClassName("options");
-                    for (var i = 0; i < all_options.length; i++) {
-                        all_options[i].style.height = "0px";
-                    }
-                    document.getElementById(item_id).querySelector('.options').style.height = "4rem";
-                }
-            }
-            function hide(item) {
-                var item_id = item.parentNode.id;
-                var item_url = 'https://stedmanwatch.github.io/Scott-Stedman-Simona-Mangiante-Twitter-DM' + '#' + item_id;
-                copyToClipboard(item_url);
-                // hide options
+        <div class="content-item" id="2018-01-22-15-16">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-01-22-15-16.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-01-22-15-25">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-01-22-15-25.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-01-25-13-09">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-01-25-13-09.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-02-05-16-35">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-02-05-16-35.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-02-05-16-55">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-02-05-16-55.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-02-05-18-05">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-02-05-18-05.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-02-06-12-19">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-02-06-12-19.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-06-03-22-54">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-06-03-22-54.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-09-19-18-38">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-19-18-38.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-09-20-17-32">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-20-17-32.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-09-20-18-13">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-20-18-13.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-09-20-18-14">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-20-18-14.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-09-20-18-16">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-20-18-16.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-09-20-18-17">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-20-18-17.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-09-20-18-19">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-20-18-19.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-09-20-18-28">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-20-18-28.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-09-27-16-25">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-27-16-25.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-09-27-17-01A">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-27-17-01A.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-09-27-17-01B">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-27-17-01B.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-09-27-18-11">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-27-18-11.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-09-27-18-14">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-27-18-14.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-09-28-00-17">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-28-00-17.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-09-28-00-31">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-28-00-31.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-09-28-02-25">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-28-02-25.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-09-28-02-27">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-28-02-27.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-09-28-10-08">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-28-10-08.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-09-28-10-28">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-28-10-28.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-09-28-13-06">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-28-13-06.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-09-28-13-21">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-28-13-21.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-09-28-13-22">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-09-28-13-22.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-10-02-19-00">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-02-19-00.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-10-03-01-06">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-01-06.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-10-03-10-31">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-10-31.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-10-03-10-49">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-10-49.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-10-03-11-31">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-11-31.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-10-03-11-33">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-11-33.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-10-03-11-39">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-11-39.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-10-03-12-14">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-12-14.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-10-03-12-22">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-12-22.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-10-03-12-28">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-12-28.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-10-03-13-24">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-13-24.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-10-03-15-00">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-15-00.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-10-03-15-11A">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-15-11A.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-10-03-15-11B">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-15-11B.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-10-03-15-19">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-15-19.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-10-03-15-21">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-15-21.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-10-03-15-25">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-15-25.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-10-03-16-59">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-16-59.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-10-03-17-27">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-17-27.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-10-03-17-33">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-17-33.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-10-03-17-35">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-17-35.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-10-03-19-35">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-19-35.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-10-03-19-49">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-19-49.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-10-03-19-52">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-19-52.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-10-03-19-54">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-19-54.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-10-03-19-55A">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-19-55A.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-10-03-19-55B">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-19-55B.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-10-03-19-56">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-19-56.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-10-03-19-57A">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-19-57A.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-10-03-19-57B">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-19-57B.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-10-03-19-58">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-19-58.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-10-03-19-59">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-19-59.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-10-03-20-00">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-20-00.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-10-03-20-02">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-20-02.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-10-03-20-08">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-20-08.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-10-03-20-15">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-20-15.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-10-03-20-15">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-03-20-15.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-10-04-article">
+            <div class="context-box">
+                <div class="context">
+                    <p><span>October 4, 2018<span></p>
+                    <p>Scott Stedman publishes his <a
+                            href="https://medium.com/@ScottMStedman/simona-mangiante-papadopoulos-is-misleading-the-public-about-her-background-8d5f7504230d"
+                            target="_blank">first article</a> about Simona Mangiante on Medium, accusing her for
+                        misleading the public about her employment background and her age, referencing his own research
+                        and unnamed sources among Mangiante's family.</p>
+                </div>
+            </div>
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-04-article.png" />
+                <div class="context-footer"></div>
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-10-04-01-12">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-04-01-12-black.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-10-04-01-44">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-04-01-44-black.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-10-04-01-52">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-04-01-52.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-10-04-01-54">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-04-01-54.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-10-10-article">
+            <div class="context-box">
+                <div class="context">
+                    <p><span>October 10, 2018<span></p>
+                    <p><a href="https://twitter.com/mattmosk" target="_blank">Matthew Mosk</a> and <a
+                            href="https://abcnews.go.com/author/kaitlyn_folmer" target="_blank">Kaitlyn Folmer</a> of
+                        ABC News publish a <a
+                            href="https://abcnews.go.com/Politics/wife-trump-aide-seeks-end-speculation-russian-spy/story?id=58413698"
+                            target="_blank">readdress article</a>, debunking all but one of the accusations made by
+                        Stedman. The two confirm that Mangiante <b>did not lie about her employment history</b>.
+                        Moreover, given the motives of the family sources Stedman used, their <b>credibility is put in
+                            serious doubt</b>. Mangiante confessed to have scraped 3 years her age.</p>
+                </div>
+            </div>
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-10-article.png" />
+                <div class="context-footer"></div>
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2018-10-26-article">
+            <div class="context-box">
+                <div class="context">
+                    <p><span>October 26, 2018<span></p>
+                    <p>Motivated by the shadow cast on his journalistic abilities by Mosk and Folmer's debunking ABC
+                        News piece, Stedman publishes his <a
+                            href="https://medium.com/@ScottMStedman/simona-mangiante-reported-to-ice-sources-close-to-george-papadopoulos-say-dcbb37a634b8"
+                            target="_blank">second article</a> on Mangiante. The new piece brings forth speculations on
+                        work visa violations circulating on social media, inconsistencies he found in Mangiante's
+                        Linkedin account and repetition of Mangiante's dishonesty about her age. The "scoop" is
+                        information about a report filed to ICE by no other than the same unnamed family sources, who
+                        are now said to be linked to her husband George Papadopoulos. The article culminates in the
+                        solidification of the allegations that Mangiante is suspected by authorities to be a Russian
+                        spy.</p>
+                </div>
+            </div>
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2018-10-26-article.png" />
+                <div class="context-footer"></div>
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2019-01-09-00-55A">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-09-00-55A.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2019-01-09-00-55B">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-09-00-55B.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2019-01-09-00-57">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-09-00-57.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2019-01-09-00-59">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-09-00-59.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2019-01-09-01-02">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-09-01-02.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2019-01-09-01-03">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-09-01-03.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2019-01-09-01-05A">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-09-01-05A.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2019-01-09-01-05B">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-09-01-05B.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2019-01-09-01-08">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-09-01-08.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2019-01-09-01-16">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-09-01-16.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2019-01-09-01-18">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-09-01-18.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2019-01-09-01-21A">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-09-01-21A.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2019-01-09-01-21B">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-09-01-21B.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2019-01-09-01-22">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-09-01-22.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2019-01-09-01-23">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-09-01-23.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2019-01-09-01-24">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-09-01-24.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2019-01-09-01-25">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-09-01-25.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2019-01-09-01-27">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-09-01-27.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2019-01-09-01-34">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-09-01-34.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2019-01-09-11-14">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-09-11-14.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2019-01-11-17-44">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-11-17-44.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2019-01-11-17-51">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-11-17-51.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2019-01-11-17-54">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-11-17-54.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2019-01-11-17-59">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-11-17-59.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2019-01-11-18-00">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-11-18-00.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2019-01-11-18-01">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-11-18-01.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2019-01-14-13-38">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-14-13-38.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2019-01-14-13-41">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-14-13-41.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2019-01-14-13-59">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-14-13-59.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2019-01-14-14-11">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-14-14-11.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2019-01-14-14-15">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-14-14-15.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2019-01-14-14-17">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-14-14-17-black.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2019-01-14-14-20">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-14-14-20.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2019-01-14-14-22">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-14-14-22-black.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2019-01-14-14-23">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-14-14-23.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2019-01-14-14-37">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-14-14-37.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2019-01-14-15-06">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-14-15-06.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2019-01-17-16-08">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-17-16-08.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2019-01-17-16-16A">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-17-16-16A.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2019-01-17-16-16B">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-01-17-16-16B.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2019-02-16-23-34">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-02-16-23-34.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2019-02-17-01-23">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-02-17-01-23.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2019-04-16-book">
+            <div class="context-box">
+                <div class="context">
+                    <p><span>April 16, 2019<span></p>
+                    <p>Scott Stedman publishes his Amazon book <a
+                            href="https://medium.com/@ScottMStedman/simona-mangiante-reported-to-ice-sources-close-to-george-papadopoulos-say-dcbb37a634b8"
+                            target="_blank">"Real News"</a> in which he dedicates a whole chapter to Simona Mangiante.
+                        In bewildering literary gymnastics peppered with much bravado, Stedman elaborates on his
+                        previously published social media "research", on Mangiante's family sources and the many
+                        journalists, lawyers, <b>law enforcement agents</b> and <b>government officials</b> who were
+                        happy with his work. Curiously enough, only in his chapter about Mangiante he finds it necessary
+                        to stress that he "stands behind every word that was written". He promisses that <b>the full
+                            story of Mrs. Papadopoulos will be revealed soon</b>.</p>
+                </div>
+            </div>
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-04-16-book.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2019-04-20-15-33">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-04-20-15-33.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+        <div class="content-item" id="2019-04-22-15-49">
+            <img class="img" onclick="show(this)"
+                src="https://raw.githubusercontent.com/StedmanWatch/Scott-Stedman-vs.-Simona-Mangiante/main/images/2019-04-22-15-49.png" />
+            <div class="options" id="options" onclick="hide(this)">
+                <p><span class="bubble">Share link to this location</span></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function show(item) {
+            var item_id = item.parentNode.id;
+            if (document.getElementById(item_id).querySelector('.options').style.height === "4rem") {
                 document.getElementById(item_id).querySelector('.options').style.height = "0px";
+            } else {
+                var all_options = document.getElementsByClassName("options");
+                for (var i = 0; i < all_options.length; i++) {
+                    all_options[i].style.height = "0px";
+                }
+                document.getElementById(item_id).querySelector('.options').style.height = "4rem";
             }
-            function copyToClipboard(string) {
-                var dummy = document.createElement("textarea");
-                document.body.appendChild(dummy);
-                dummy.value = string;
-                dummy.select();
-                document.execCommand("copy");
-                document.body.removeChild(dummy);
-            }
-        </script>
-    </body>
+        }
+        function hide(item) {
+            var item_id = item.parentNode.id;
+            var item_url = 'https://stedmanwatch.github.io/Scott-Stedman-Simona-Mangiante-Twitter-DM' + '#' + item_id;
+            copyToClipboard(item_url);
+            // hide options
+            document.getElementById(item_id).querySelector('.options').style.height = "0px";
+        }
+        function copyToClipboard(string) {
+            var dummy = document.createElement("textarea");
+            document.body.appendChild(dummy);
+            dummy.value = string;
+            dummy.select();
+            document.execCommand("copy");
+            document.body.removeChild(dummy);
+        }
+    </script>
+</body>
+
 </html>
