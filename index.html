@@ -103,7 +103,6 @@
             bottom: 0;
             height: 100vh;
             width: 0px;
-            /* width: 200px; */
             background-color: white;
             overflow-x: hidden;
             overflow-y: auto;
@@ -123,24 +122,51 @@
             cursor: pointer;
         }
 
+        .sidenav .text {
+            display: relative;
+            font-size: 1.1em;
+            color: #818181;
+            padding: 8px 30px 8px 30px;
+        }
+
+        .sharable {
+            background-color: #39C999;
+            color: white;
+            border-radius: 15px;
+            padding: 0px 7px 0px 7px;
+            font-weight: 500;
+        }
+
+        .sidenav .menuetitle {
+            margin-top: 20px;
+            padding: 4px 30px 4px 30px;
+            font-weight: 900;
+            font-size: 24px;
+            color: #000000;
+            display: block;
+        }
+
         .sidenav .menue {
             display: relative;
             height: 100%;
-            font-size: 65px;
-            /* margin-top: 20px; */
         }
 
         .sidenav a {
-            padding: 8px 8px 8px 32px;
+            padding: 4px 30px 4px 30px;
             text-decoration: none;
-            font-size: 25px;
-            color: #818181;
-            display: block;
+            font-size: 20px;
+            font-weight: 900;
+            color: #c5c7c7;
             transition: 0.3s;
+            display: block;
         }
 
         .sidenav a:hover {
-            color: #eff3f4;
+            color: #818181;
+        }
+
+        .sidenav a: {
+            color: #818181;
         }
 
         .iframe-container {
@@ -209,7 +235,6 @@
                 padding: 0 10px 4px 10px;
                 margin: 4px 5px 4px 5px;
                 border-radius: 10px;
-
             }
 
             #simona {
@@ -247,7 +272,6 @@
                 bottom: 0;
                 height: 100vh;
                 width: 0px;
-                /* width: min(200px, 80vw); */
                 background-color: white;
                 overflow-x: hidden;
                 overflow-y: auto;
@@ -261,16 +285,28 @@
                 font-size: max(3.6rem, 7.4vw);
                 text-align: left;
                 margin-left: 30px;
-
+                margin-top: 0.4vw;
                 cursor: pointer;
+            }
+
+            .sidenav .text {
+                display: relative;
+                font-size: 1.1em;
+                padding: 8px 30px 8px 32px;
+            }
+
+            .sharable {
+                background-color: #39C999;
+                color: white;
+                border-radius: 15px;
+                padding: 0px 7px 0px 7px;
+                font-weight: 500;
             }
 
             .sidenav .menue {
                 display: relative;
                 height: 100%;
                 font-size: 65px;
-                /*margin-top: 11vw;
-                margin-top: max(65px, 11vw);*/
             }
         }
     </style>
@@ -305,11 +341,23 @@
             <div class="closebtn" onclick="closeNav()">
                 &times;
             </div>
+            <div class="text">
+                Scroll & click messages for <span class="sharable">sharable links</span>
+            </div>
+            <div class="menuetitle">
+                Timeline
+            </div>
             <div class="menue">
-                <a href="#">About</a>
-                <a href="#">Services</a>
-                <a href="#">Clients</a>
-                <a href="#">Contact</a>
+                <a href="javascript:navigate('#2018-01-22-14-55')">January 2018</a>
+                <a href="javascript:navigate('#2018-02-05-16-35')">February 2018</a>
+                <a href="javascript:navigate('#2018-06-03-22-54')">June 2018</a>
+                <a href="javascript:navigate('#2018-09-19-18-38')">September 2018</a>
+                <a href="javascript:navigate('#2018-10-02-19-00')">October 2018</a>
+                <a href="javascript:navigate('#2019-01-09-00-55A')">January 2019</a>
+                <a href="javascript:navigate('#2019-02-16-23-34')">February 2019</a>
+                <a href="javascript:navigate('#2019-04-16-book')">April 2019</a>
+                <a href="javascript:navigate('#2019-06-19-22-29A')">June 2019</a>
+                <a href="javascript:navigate('#2020-12-31-01-46')">December 2019</a>
             </div>
         </div>
 
@@ -352,6 +400,14 @@
             iframe.src = iframe_target;
         }
         setAnchor();
+
+        function navigate(id) {
+            var iframe = document.getElementById('iframe');
+            var url = 'https://stedmanwatch.github.io/Scott-Stedman-Simona-Mangiante-Twitter-DM/iframe.html';
+            var iframe_target = url + id;
+            iframe.src = iframe_target;
+        }
+
     </script>
 </body>
 
