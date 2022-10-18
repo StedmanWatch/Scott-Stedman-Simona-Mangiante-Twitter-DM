@@ -1483,7 +1483,9 @@
         }
         function isIndexLoad(){
             var iframePage = window.frameElement;
-            if ( /https\:\/\/stedmanwatch.github.io\/Scott-Stedman-Simona-Mangiante-Twitter-DM/.test(iframePage) ) {
+            var src = new RegExp('stedmanwatch.github.io/Scott-Stedman-Simona-Mangiante-Twitter-DM');
+            alert(iframePage.src);
+            if ( src.test(iframePage.src) ) {
                 alert('OK');
             } else {
                 alert ('BAD');
