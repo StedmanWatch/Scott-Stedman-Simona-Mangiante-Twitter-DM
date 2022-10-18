@@ -182,7 +182,7 @@
 <body>
     <script>
         function isIndexLoad() {
-            if (top.location.href != 'https://stedmanwatch.github.io/Scott-Stedman-Simona-Mangiante-Twitter-DM') {
+            if (top.location.href.match('iframe')) {
                 top.location.href = 'https://stedmanwatch.github.io/Scott-Stedman-Simona-Mangiante-Twitter-DM';
             }
         }
