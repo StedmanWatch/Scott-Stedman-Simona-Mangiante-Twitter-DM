@@ -182,10 +182,9 @@
 <body>
     <script>
         function isIndexLoad() {
-            var frameElement = window.frameElement;
-            var loader = frameElement.src;
-            alert(loader);
-            if (loader == 'https://stedmanwatch.github.io/Scott-Stedman-Simona-Mangiante-Twitter-DM/iframe.html') {
+            var loader = window.parent.location;
+            var forbid = new RegExp('https://stedmanwatch.github.io/Scott-Stedman-Simona-Mangiante-Twitter-DM/iframe.html')
+            if (loader.match(forbid)) {
                 location.replace('https://stedmanwatch.github.io/Scott-Stedman-Simona-Mangiante-Twitter-DM');
             }
         }
