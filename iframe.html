@@ -2,6 +2,18 @@
 <html lang="en-US">
 
 <head>
+    <script>
+        function isIndexLoad(){
+            var frameElement = window.frameElement;
+            var loader = frameElement.src;
+            alert(loader);
+            var authorized = new RegExp('https://stedmanwatch.github.io/Scott-Stedman-Simona-Mangiante-Twitter-DM');
+            if ( loader.test(authorized) != true ) {
+                location.replace('https://stedmanwatch.github.io/Scott-Stedman-Simona-Mangiante-Twitter-DM');
+            }
+        }
+        isIndexLoad();
+    </script>
     <title>Scott Stedman &#8646; Simona Mangiante [DM] - Timeline</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -1481,17 +1493,6 @@
             document.execCommand("copy");
             document.body.removeChild(dummy);
         }
-        function isIndexLoad(){
-            var iframePage = window.frameElement;
-            var src = new RegExp('stedmanwatch.github.io/Scott-Stedman-Simona-Mangiante-Twitter-DM');
-            alert(iframePage.src);
-            if ( src.test(iframePage.src) ) {
-                alert('OK');
-            } else {
-                alert ('BAD');
-            }
-        }
-        isIndexLoad();
     </script>
 </body>
 
