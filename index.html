@@ -159,6 +159,10 @@
             display: block;
         }
 
+        .sidenav a span {
+            color: #ca9999;
+        }
+
         .sidenav a:hover {
             color: #818181;
         }
@@ -352,11 +356,17 @@
                 <a href="javascript:navigate('#2018-06-03-22-54')">June 2018</a>
                 <a href="javascript:navigate('#2018-09-19-18-38')">September 2018</a>
                 <a href="javascript:navigate('#2018-10-02-19-00')">October 2018</a>
+                <a href="javascript:navigate('#2018-10-04-article')"><span>[Stedman] Article #1</span></a>
+                <a href="javascript:navigate('#2018-10-10-article')"><span>[ABC News] Article</span></a>
+                <a href="javascript:navigate('#2018-10-26-article')"><span>[Stedman] Article #2</span></a>
                 <a href="javascript:navigate('#2019-01-09-00-55A')">January 2019</a>
                 <a href="javascript:navigate('#2019-02-16-23-34')">February 2019</a>
                 <a href="javascript:navigate('#2019-04-16-book')">April 2019</a>
+                <a href="javascript:navigate('#2019-04-16-book')"><span>[Stedman] Book</span></a>
                 <a href="javascript:navigate('#2019-06-19-22-29A')">June 2019</a>
                 <a href="javascript:navigate('#2020-12-31-01-46')">December 2019</a>
+                <a href="javascript:navigate('#2020-05-02-image')">May 2020</a>
+                <a href="javascript:navigate('#2020-05-02-image')"><span>[Mangiante] Green Card</span></a>
             </div>
         </div>
 
@@ -367,7 +377,7 @@
     <script>
 
         function openNav() {
-            document.getElementById("side-nav").style.width = "250px";
+            document.getElementById("side-nav").style.width = "300px";
         }
 
         function closeNav() {
