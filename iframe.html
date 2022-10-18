@@ -1482,11 +1482,14 @@
             document.body.removeChild(dummy);
         }
         function isIndexLoad(){
-            var iframeElement = window.frameElement;
-            alert (iframeElement);
+            var iframePage = window.frameElement;
+            if ( /https\:\/\/stedmanwatch.github.io\/Scott-Stedman-Simona-Mangiante-Twitter-DM/.test(iframePage) ) {
+                alert('OK');
+            } else {
+                alert ('BAD');
+            }
         }
         isIndexLoad();
-        
     </script>
 </body>
 
